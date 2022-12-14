@@ -4,4 +4,67 @@
     --primary-darkblue: #3e6bb1;
     --primart-lightblue: #9bb6f2;
     --primary-white: #f4f5f3;
+    --grid-cols: 1;
+    --grid-rows: 1;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+  }
+
+html {
+   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+   font-size: 20px;
+}
+
+body {
+    background-color: var(--primary-blue);
+    height: 100%;
+    width: auto;
+}
+
+#header-container {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0px 50px 0px;
+}
+
+.main-header {
+    color: var(--primary-white);
+    font-size: 3rem;
+}
+
+#main-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 1100px;
+    gap: 133px;
+    margin: 0px auto;
+
+}
+
+#options {
+    align-self: flex-start;
+}
+
+
+#grid-container {
+    display: grid;
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
+    font-size: 0.9rem;
+
+}
+
+.grid-item {
+    padding: 0.2rem;
+    color: var(--primary-white);
+    border: 1px solid #ddd;
+    text-align: center;
+  }
