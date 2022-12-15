@@ -67,4 +67,5 @@ body {
     color: var(--primary-white);
     border: 1px solid #ddd;
     text-align: center;
+    background-color: var(--primary-white);
   }
