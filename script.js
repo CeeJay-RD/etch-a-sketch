@@ -22,14 +22,14 @@ function changeGridColor () {
   })
 }
 
-// function changeGridColor(e) {
-//   let color = `rgb(${[0, 0, 0].map(channel => {
-//     return Math.floor(Math.random() * 256);
-//   }).join(',')})`
-//   Object.assign(e.target.style, {
-//     backgroundColor : color,
-//     opacity : 1
-//   });
-// }
+function changeGridColor(e) {
+  let color = `rgb(${[24, 24, 24].map(() => {
+    return Math.floor(Math.random() * 256);
+  }).join(',')})`
+  Object.assign(e.target.style, {
+    backgroundColor : color,
+    opacity : 1
+  });
+}
 
   
