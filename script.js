@@ -1,13 +1,34 @@
-const gridContainer = document.getElementById('grid-container');
-let color = document.getElementById('color-picker');
-let grindItems = document.getElementsByClassName('grid-item');
+const DEFAULT_COLOR = '#f4f5f3'
+const DEFAULT_MODE =  'color'
+
+let currentColor = DEFAULT_COLOR
+let currentMode = DEFAULT_MODE
+
+
+function setCurrentColor(newColor) {
+  currentColor = newColor
+}
+
+function setCurrentMode(newMode) {
+  currentMode = newMode
+}
+
+const gridContainer = document.getElementById('grid-container')
+const colorPicker = document.getElementById('color-picker')
+const grindItems = document.getElementsByClassName('grid-item')
+const colorBtn = document.getElementById('color-btn')
+const rainbowBtn = document.getElementById('rainbow-btn')
+
+colorPicker.oninput = (e) => setCurrentColor(e.target.value)
+rainbowBtn.onclick = () => setCurrentMode('rainbow')
+colorBtn.onclick = () => setCurrentMode('color')
+
 
 function makeRows(rows, cols) {
     gridContainer.style.setProperty('--grid-rows', rows);
     gridContainer.style.setProperty('--grid-cols', cols);
     for (c = 0; c < (rows * cols); c++) {
       let cell = document.createElement("div");
-      cell.innerText = (c + 1);
       cell.addEventListener('mouseover', changeGridColor)
       gridContainer.appendChild(cell).className = "grid-item";
     };
@@ -23,13 +44,15 @@ function changeGridColor () {
 }
 
 function changeGridColor(e) {
-  let color = `rgb(${[24, 24, 24].map(() => {
-    return Math.floor(Math.random() * 256);
-  }).join(',')})`
-  Object.assign(e.target.style, {
-    backgroundColor : color,
-    opacity : 1
-  });
+  if (currentMode === 'rainbow') {
+    const randomR = Math.floor(Math.random() * 256)
+    const randomG = Math.floor(Math.random() * 256)
+    const randomB = Math.floor(Math.random() * 256)
+    e.target.style.backgroundColor = `rgb(${randomR}, ${randomG}, ${randomB})`
+  } else if (currentMode === 'color') {
+    e.target.style.backgroundColor = currentColor
+  }
+
 }
 
   

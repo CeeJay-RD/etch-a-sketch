@@ -67,8 +67,7 @@ button:active {
 #main-container {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    max-width: 1100px;
+    justify-content: center;
     gap: 133px;
     margin: 0px auto;
 
@@ -82,9 +81,12 @@ button:active {
     color: var(--primary-red);
     text-align: center;
     background-color: var(--primary-bluegray);
-    height: 48vh;
-    width: 30vw;
+    height: 22vh;
+    width: 13vw;
+    min-width: 210px;
     border-radius: 8px;
+
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 #rainbow-btn:hover {
@@ -115,7 +117,7 @@ input[type="color"]::-webkit-color-swatch-wrapper {
 }
 input[type="color"]::-webkit-color-swatch {
     border: var(--primary-lightgreen);
-    border-radius: 8px;
+    border-radius: 12px;
 }
 
 #color-picker {
@@ -137,12 +139,14 @@ input[type="color"]::-webkit-color-swatch {
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr);
     font-size: 0.9rem;
+    width: 600px;
+    height: 600px;
 
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .grid-item {
     padding: 0.2rem;
-    color: #8b8e86;
     text-align: center;
     background-color: #8b8e86;
   }
