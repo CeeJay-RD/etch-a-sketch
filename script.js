@@ -30,20 +30,19 @@ function makeRows(rows, cols) {
     for (c = 0; c < (rows * cols); c++) {
       let cell = document.createElement("div");
       cell.addEventListener('mouseover', changeGridColor)
+      cell.addEventListener('mousedown', changeGridColor)
       gridContainer.appendChild(cell).className = "grid-item";
     };
   };
 
+let mouseDown = false
+document.body.onmousedown = () => (mouseDown = true)
+document.body.onmouseup = () => (mouseDown = false)
+
   makeRows(16, 16);
 
-function changeGridColor () {
-  color.addEventListener('input', function(e) {
-    grindItems.style.color = this.value;
-
-  })
-}
-
 function changeGridColor(e) {
+  if (e.type === 'mouseover' && !mouseDown) return
   if (currentMode === 'rainbow') {
     const randomR = Math.floor(Math.random() * 256)
     const randomG = Math.floor(Math.random() * 256)
