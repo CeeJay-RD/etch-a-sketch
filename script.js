@@ -15,14 +15,15 @@ function setCurrentMode(newMode) {
 
 const gridContainer = document.getElementById('grid-container')
 const colorPicker = document.getElementById('color-picker')
-const grindItems = document.getElementsByClassName('grid-item')
+
 const colorBtn = document.getElementById('color-btn')
 const rainbowBtn = document.getElementById('rainbow-btn')
+const clearBtn = document.getElementById('clear-btn')
 
 colorPicker.oninput = (e) => setCurrentColor(e.target.value)
 rainbowBtn.onclick = () => setCurrentMode('rainbow')
 colorBtn.onclick = () => setCurrentMode('color')
-
+clearBtn.onclick = () => clearGrid()
 
 function makeRows(rows, cols) {
     gridContainer.style.setProperty('--grid-rows', rows);
@@ -54,4 +55,10 @@ function changeGridColor(e) {
 
 }
 
-  
+const gridItems = document.querySelectorAll('.grid-item')
+
+function clearGrid() {
+  gridItems.forEach(div => {
+    div.style.backgroundColor = '#f4f5f3';
+  });
+}
