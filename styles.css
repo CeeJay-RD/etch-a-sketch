@@ -38,7 +38,7 @@ button {
     background-color: var(--primary-darkteal);
     border: 1px solid var(--primary-red);
     border-radius: 4px;
-    padding: 0 15px;
+    padding: 0.34rem;
     cursor: pointer;
     height:32px;
     width: 200px;
@@ -46,6 +46,10 @@ button {
     background-position: center;
     transition: background 0.8s;
     }
+
+button:hover {
+    background-color: rgba(1, 51, 63, 0.671);
+}
 
 button:active {
     box-shadow: 0 3px 0 var(--primary-red);
@@ -81,11 +85,11 @@ button:active {
     color: var(--primary-red);
     text-align: center;
     background-color: var(--primary-bluegray);
-    height: 22vh;
-    width: 13vw;
+    height: 24vh;
+    width: 20vw;
     min-width: 210px;
     border-radius: 8px;
-
+    padding-bottom: 20px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
@@ -109,8 +113,8 @@ button:active {
 
 input[type="color"] {
 	border: none;
-	width: 32px;
-	height: 32px;
+	width: 40px;
+	height: 60px;
 }
 input[type="color"]::-webkit-color-swatch-wrapper {
 	padding: 0;
@@ -148,10 +152,38 @@ input[type="color"]::-webkit-color-swatch {
 .grid-item {
     padding: 0.2rem;
     text-align: center;
-    background-color: #8b8e86;
+    background-color: var(--primary-white);
     -webkit-user-drag: none;
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
+  }
+
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    
+    appearance: none;
+    cursor: pointer;
+    background-color: var(--primary-darkteal);
+    border-radius: 8px;
+    height: 40px;
+    width: 200px;
+
+  }
+
+  .slider:hover {
+ 
+    background-color: rgba(1, 51, 63, 0.671);
+
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 16px;
+    background: var(--primary-red);
+    cursor: pointer;
   }
