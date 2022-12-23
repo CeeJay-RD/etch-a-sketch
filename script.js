@@ -1,4 +1,4 @@
-const DEFAULT_COLOR = '#f4f5f3'
+const DEFAULT_COLOR = '#000000'
 const DEFAULT_MODE =  'color'
 
 let currentColor = DEFAULT_COLOR
