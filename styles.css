@@ -85,7 +85,7 @@ button:active {
     color: var(--primary-red);
     text-align: center;
     background-color: var(--primary-bluegray);
-    height: 26vh;
+    height: 30vh;
     width: 20vw;
     min-width: 210px;
     border-radius: 8px;
