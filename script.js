@@ -15,6 +15,7 @@ function setCurrentMode(newMode) {
 
 const gridContainer = document.getElementById('grid-container')
 const colorPicker = document.getElementById('color-picker')
+const gridRange = document.getElementById('myRange')
 
 const colorBtn = document.getElementById('color-btn')
 const rainbowBtn = document.getElementById('rainbow-btn')

@@ -85,7 +85,7 @@ button:active {
     color: var(--primary-red);
     text-align: center;
     background-color: var(--primary-bluegray);
-    height: 24vh;
+    height: 26vh;
     width: 20vw;
     min-width: 210px;
     border-radius: 8px;
@@ -186,4 +186,9 @@ input[type="color"]::-webkit-color-swatch {
     border-radius: 16px;
     background: var(--primary-red);
     cursor: pointer;
+  }
+
+#rangeText {
+    font-weight: 600;
+    font-size: 1.5rem;
   }
