@@ -72,7 +72,7 @@ function changeGridColor(e) {
 const gridItems = document.querySelectorAll('.grid-item')
 
 function clearGrid() {
-  gridItems.forEach(div => {
-    div.style.backgroundColor = '#f4f5f3';
-  });
+  gridContainer.innerHTML = ""
+  makeRows(gridRange.value, gridRange.value)
 }
+
