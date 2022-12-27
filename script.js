@@ -25,6 +25,7 @@ gridRange.addEventListener('input', () => {
 }, false);
 
 gridRange.addEventListener('input', () => {
+  gridContainer.innerHTML = ""
   makeRows(gridRange.value, gridRange.value)
 })
 
