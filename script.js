@@ -1,7 +1,9 @@
 const DEFAULT_COLOR = '#000000'
 const DEFAULT_MODE =  'color'
+const DEFAULT_ERASER_COLOR = '#f4f5f3'
 
 let currentColor = DEFAULT_COLOR
+let eraserColor = DEFAULT_ERASER_COLOR
 let currentMode = DEFAULT_MODE
 
 
@@ -32,9 +34,11 @@ gridRange.addEventListener('input', () => {
 
 const colorBtn = document.getElementById('color-btn')
 const rainbowBtn = document.getElementById('rainbow-btn')
+const eraserBtn = document.getElementById('eraser-btn')
 const clearBtn = document.getElementById('clear-btn')
 
 colorPicker.oninput = (e) => setCurrentColor(e.target.value)
+eraserBtn.onclick = () => setCurrentMode('eraser')
 rainbowBtn.onclick = () => setCurrentMode('rainbow')
 colorBtn.onclick = () => setCurrentMode('color')
 clearBtn.onclick = () => clearGrid()
@@ -65,6 +69,8 @@ function changeGridColor(e) {
     e.target.style.backgroundColor = `rgb(${randomR}, ${randomG}, ${randomB})`
   } else if (currentMode === 'color') {
     e.target.style.backgroundColor = currentColor
+  } else if (currentMode === 'eraser') {
+    e.target.style.backgroundColor = eraserColor
   }
 
 }
