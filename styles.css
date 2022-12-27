@@ -129,6 +129,7 @@ input[type="color"]::-webkit-color-swatch {
     background: none;
     width: 50px;
     margin: 0;
+    cursor: pointer;
 }
 
 .options-header {

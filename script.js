@@ -16,6 +16,18 @@ function setCurrentMode(newMode) {
 const gridContainer = document.getElementById('grid-container')
 const colorPicker = document.getElementById('color-picker')
 const gridRange = document.getElementById('myRange')
+let rangeText = document.getElementById('rangeText')
+
+rangeText.innerText = gridRange.value + 'x' + gridRange.value
+
+gridRange.addEventListener('input', () => {
+  rangeText.innerText = gridRange.value + 'x' + gridRange.value;
+}, false);
+
+gridRange.addEventListener('input', () => {
+  makeRows(gridRange.value, gridRange.value)
+})
+
 
 const colorBtn = document.getElementById('color-btn')
 const rainbowBtn = document.getElementById('rainbow-btn')
